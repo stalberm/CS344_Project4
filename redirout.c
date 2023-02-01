@@ -21,7 +21,7 @@ int main(int argc, char *argv[]) {
         dup2(pfd[1], 1);
         close(pfd[0]);
         execvp(command, argv+2);
-        perror("wc");
+        perror(command);
         exit(1);
     } else {
         close(pfd[1]);
@@ -40,4 +40,5 @@ int main(int argc, char *argv[]) {
         close(pfd[0]);
         close(fd);
     }
+    return 0;
 }
