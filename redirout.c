@@ -19,7 +19,7 @@ int main(int argc, char *argv[]) {
     char *command = argv[2];
 
     int fd;
-    fd = open(outfile, O_WRONLY | O_CREAT | O_TRUNC, 0644);
+    fd = open(outfile, O_WRONLY | O_CREAT | O_TRUNC, 0666);
 
     int pfd[2];
     pipe(pfd);
